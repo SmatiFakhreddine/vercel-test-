@@ -4,9 +4,8 @@ import bodyParser from "body-parser";
 const app = express();
 const port = 3000;
 
-app.set('view engine', 'ejs');
-app.use(express.static("../public"));
-
+app.set('views', './views');
+app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 const x = new Date().getFullYear();
