@@ -1,13 +1,15 @@
-import express from "express";
-import bodyParser from "body-parser";
-import env from "dotenv";
+const express = require("express");
+const bodyParser = require("body-parser");
+const env = require("dotenv");
 
 env.config();
 
 const app = express();
 const port = process.env.PORT;
 
-app.set('views', './views');
+app.set('view engine', 'ejs');
+app.set('views', __dirname + '/views');
+
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -5693,3 +5695,5 @@ const noun = [
   "zoot-suit",
   "zucchini",
 ];
+
+module.exports = app;
