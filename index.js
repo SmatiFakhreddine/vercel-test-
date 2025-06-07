@@ -5690,5 +5690,3 @@ const noun = [
   "zoot-suit",
   "zucchini",
 ];
-
-export {app};
