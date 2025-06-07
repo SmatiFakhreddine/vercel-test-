@@ -10,7 +10,7 @@ const port = process.env.PORT;
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 const x = new Date().getFullYear();
